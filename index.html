@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SmartBidBusiness - Contract Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Preencha o Contrato de Vendas</h1>
+    <form id="contractForm">
+      <label for="clientName">Nome do Cliente:</label>
+      <input type="text" id="clientName" required>
+
+      <label for="product">Produto/Serviço:</label>
+      <input type="text" id="product" required>
+
+      <label for="amount">Valor (R$):</label>
+      <input type="number" id="amount" required>
+
+      <label for="paymentTerms">Condições de Pagamento:</label>
+      <textarea id="paymentTerms" rows="4" required></textarea>
+
+      <label for="authorization">Autorização:</label>
+      <textarea id="authorization" rows="4" required>Autorizo a venda do produto/serviço acima descrito.</textarea>
+
+      <button type="button" onclick="generatePDF()">Gerar PDF</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
