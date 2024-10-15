@@ -2,6 +2,8 @@
 
 **SmartBidBusiness** é uma ferramenta moderna e eficiente para a criação e gerenciamento de contratos e acordos, ideal para qualquer tipo de negociação, seja em vendas, compras ou outros tipos de transações comerciais. Este site responsivo permite que você preencha e gere documentos de forma dinâmica em PDF, garantindo que seus acordos sejam formalizados de maneira rápida e profissional.
 
+**Acesse a aplicação aqui:** [https://albervan.github.io/SmartBidBusiness/](https://albervan.github.io/SmartBidBusiness/)
+
 ## Funcionalidades
 
 - **Formulário dinâmico e intuitivo**: Insira facilmente as informações-chave, como o nome da parte, descrição do serviço/produto, valor e termos do acordo.
