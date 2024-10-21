@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SmartBidBusiness - Contract Generator</title>
+  <title>SmartBidBusiness - Agreement Generator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>Preencha o Contrato de Acordo</h1>
+    <h1>Preencha o Detalhes do Acordo</h1>
     <form id="contractForm">
       
-      <label>Tipo de Acordo:</label>
-      <div class="agreement-type">
-        <input type="radio" id="venda" name="agreementType" value="Venda" required>
-        <label for="venda">Venda</label>
+      <div class="form-group">
+        <label for="agreement-type">Tipo de Acordo:</label>
+        <div class="agreement-options">
+          <input type="radio" id="venda" name="agreementType" value="Venda" required>
+          <label for="venda">Venda</label>
 
-        <input type="radio" id="compra" name="agreementType" value="Compra">
-        <label for="compra">Compra</label>
+          <input type="radio" id="compra" name="agreementType" value="Compra">
+          <label for="compra">Compra</label>
 
-        <input type="radio" id="terceiros" name="agreementType" value="Terceiros">
-        <label for="terceiros">Terceiros</label>
+          <input type="radio" id="terceiros" name="agreementType" value="Terceiros">
+          <label for="terceiros">Terceiros</label>
+        </div>
       </div>
 
       <label for="date">Data:</label>
@@ -46,8 +48,8 @@
       <input type="text" id="otherProduct" placeholder="Especifique o produto" style="display: none;">
 
       <label for="quantity">Quantidade:</label>
-      <div class="quantity-unit">
-        <input type="number" id="quantity" step="0.01" required>
+      <div class="form-row">
+        <input type="number" id="quantity" step="0.10" required>
         <select id="unit" required>
           <option value="Toneladas">Toneladas</option>
           <option value="Sacas">Sacas</option>
@@ -55,17 +57,21 @@
         </select>
       </div>
 
-      <label for="commissionValue">Valor Comissão (R$):</label>
-      <input type="number" id="commissionValue" step="0.01" required>
+      <div class="form-row">
+        <label for="commissionValue">Valor Comissão (R$):</label>
+        <input type="number" id="commissionValue" step="0.10" required>
 
-      <label for="unitValue">Valor Unitário Final (R$):</label>
-      <input type="number" id="unitValue" step="0.01" required>
+        <label for="unitValue">Valor Unitário Final (R$):</label>
+        <input type="number" id="unitValue" step="0.10" required>
+      </div>
 
-      <label for="totalValue">Valor Total (R$):</label>
-      <input type="number" id="totalValue" readonly>
+      <div class="form-row">
+        <label for="totalValue">Valor Total (R$):</label>
+        <input type="number" id="totalValue" readonly>
 
-      <label for="totalCommission">Comissão Total (R$):</label>
-      <input type="number" id="totalCommission" readonly>
+        <label for="totalCommission">Comissão Total (R$):</label>
+        <input type="number" id="totalCommission" readonly>
+      </div>
 
       <label for="paymentTerms">Condições de Pagamento:</label>
       <textarea id="paymentTerms" rows="4" required></textarea>

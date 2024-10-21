@@ -22,8 +22,10 @@ form {
   flex-direction: column;
 }
 
-.quantity-unit {
+.form-row {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
 }
 
@@ -64,6 +66,11 @@ button:hover {
   background-color: #218838;
 }
 
+.agreement-options {
+  display: flex;
+  gap: 10px;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 10px;
@@ -75,5 +82,9 @@ button:hover {
 
   button {
     font-size: 14px;
+  }
+
+  .form-row {
+    flex-direction: column;
   }
 }

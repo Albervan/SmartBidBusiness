@@ -42,7 +42,7 @@ function generatePDF() {
   const authorization = document.getElementById('authorization').value;
 
   doc.setFontSize(16);
-  doc.text("Contrato de Acordo", 20, 20);
+  doc.text("Acordo de Negociação", 20, 20);
 
   doc.setFontSize(12);
   doc.text(`Tipo de Acordo: ${agreementType}`, 20, 40);
@@ -58,5 +58,5 @@ function generatePDF() {
   doc.text("Autorização:", 20, 150);
   doc.text(authorization, 20, 160, { maxWidth: 170 });
 
-  doc.save("contrato.pdf");
+  window.open(doc.output('bloburl'));
 }
