@@ -4,28 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SmartBidBusiness - Agreement Generator</title>
+  <title>SmartBidBusiness - Contract Generator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>Preencha os Detalhes do Acordo</h1>
+    <h1>Preencha o Contrato de Acordo</h1>
     <form id="contractForm">
+      
+      <label>Tipo de Acordo:</label>
+      <div class="agreement-type">
+        <input type="radio" id="venda" name="agreementType" value="Venda" required>
+        <label for="venda">Venda</label>
+
+        <input type="radio" id="compra" name="agreementType" value="Compra">
+        <label for="compra">Compra</label>
+
+        <input type="radio" id="terceiros" name="agreementType" value="Terceiros">
+        <label for="terceiros">Terceiros</label>
+      </div>
+
+      <label for="date">Data:</label>
+      <input type="date" id="date" required>
+
       <label for="clientName">Nome do Cliente:</label>
       <input type="text" id="clientName" required>
 
-      <label for="product">Produto/Serviço:</label>
-      <input type="text" id="product" required>
+      <label for="location">Local do Carregamento:</label>
+      <input type="text" id="location" required>
 
-      <label for="amount">Valor (R$):</label>
-      <input type="number" id="amount" required>
+      <label for="product">Produto:</label>
+      <select id="product" required>
+        <option value="Soja">Soja</option>
+        <option value="Milho">Milho</option>
+        <option value="Algodão">Algodão</option>
+        <option value="Boi">Boi</option>
+        <option value="Girassol">Girassol</option>
+        <option value="Outro">Outro (especificar)</option>
+      </select>
+      <input type="text" id="otherProduct" placeholder="Especifique o produto" style="display: none;">
+
+      <label for="quantity">Quantidade:</label>
+      <div class="quantity-unit">
+        <input type="number" id="quantity" step="0.01" required>
+        <select id="unit" required>
+          <option value="Toneladas">Toneladas</option>
+          <option value="Sacas">Sacas</option>
+          <option value="Quilogramas">Quilogramas</option>
+        </select>
+      </div>
+
+      <label for="commissionValue">Valor Comissão (R$):</label>
+      <input type="number" id="commissionValue" step="0.01" required>
+
+      <label for="unitValue">Valor Unitário Final (R$):</label>
+      <input type="number" id="unitValue" step="0.01" required>
+
+      <label for="totalValue">Valor Total (R$):</label>
+      <input type="number" id="totalValue" readonly>
+
+      <label for="totalCommission">Comissão Total (R$):</label>
+      <input type="number" id="totalCommission" readonly>
 
       <label for="paymentTerms">Condições de Pagamento:</label>
       <textarea id="paymentTerms" rows="4" required></textarea>
 
       <label for="authorization">Autorização:</label>
-      <textarea id="authorization" rows="4" required>Autorizo a venda do produto/serviço acima descrito.</textarea>
+      <textarea id="authorization" rows="4" required>Autorizo a transação do produto acima descrito.</textarea>
 
       <button type="button" onclick="generatePDF()">Gerar PDF</button>
     </form>
